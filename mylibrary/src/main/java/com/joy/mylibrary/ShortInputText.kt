@@ -11,10 +11,15 @@ import android.widget.EditText
 @SuppressLint("AppCompatCustomView")
 class ShortInputText(context: Context, attrs: AttributeSet) : EditText(context, attrs) {
 
+    companion object{
+        private const val PADDING = 5
+    }
+
     init {
         // Apply custom design modifications
         val drawable = ContextCompat.getDrawable(context, R.drawable.custom_background)
         background = drawable
+        paddingLeft.and(5)
         setTextColor(Color.RED)
     }
 
